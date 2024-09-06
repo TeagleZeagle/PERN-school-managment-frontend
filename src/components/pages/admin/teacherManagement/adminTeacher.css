@@ -1,0 +1,114 @@
+.admin-teacher-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.admin-teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.admin-teacher-table th,
+.admin-teacher-table td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    word-wrap: break-word;
+}
+
+.admin-teacher-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.admin-teacher-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-teacher-table tr:hover {
+    background-color: #e0f7fa;
+}
+
+.admin-teacher-table td {
+    font-size: 15px;
+}
+
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.add-teacher-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-teacher-button:hover {
+    background-color: #45a049;
+}
+
+.delete-teacher-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-teacher-button:hover {
+    background-color: #e53935;
+}
+
+.edit-teacher-button {
+    background-color: #ff9800;
+    color: white;
+}
+
+.edit-teacher-button:hover {
+    background-color: #fb8c00;
+}
+
+@media (max-width: 768px) {
+    .admin-teacher-table th,
+    .admin-teacher-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-teacher-table th,
+    .admin-teacher-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}

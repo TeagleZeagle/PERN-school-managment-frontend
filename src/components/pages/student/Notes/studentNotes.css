@@ -1,0 +1,66 @@
+.student-notes-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.student-notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.student-notes-table th,
+.student-notes-table td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    word-wrap: break-word;
+}
+
+.student-notes-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.student-notes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.student-notes-table tr:hover {
+    background-color: #e0f7fa;
+}
+
+.student-notes-table td {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .student-notes-table th,
+    .student-notes-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-notes-table th,
+    .student-notes-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

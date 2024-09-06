@@ -1,0 +1,64 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: blueviolet;
+    transition: width 0.3s ease, padding 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sidebar.open {
+    width: 200px;
+    padding: 20px;
+}
+
+.sidebar.closed {
+    width: 0;
+    padding: 0;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ddd;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background-color: white;
+    color: black;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.hamburger-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    font-size: 24px;
+    z-index: 1;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    color: #007bff;
+}
