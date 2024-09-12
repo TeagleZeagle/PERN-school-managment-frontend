@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
-import {useNavigate} from "react-router-dom";
-import {IoMdArrowBack} from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+import { IoMdArrowBack } from "react-icons/io";
 
 const Teacher = () => {
     const [email, setEmail] = useState('');
@@ -23,6 +23,8 @@ const Teacher = () => {
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('token', data.access_token);
+
+                // Decode the token manually (same as in admin)
                 const base64Url = data.access_token.split('.')[1];
                 const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
                 const jsonPayload = decodeURIComponent(atob(base64).split('').map((c) => {
@@ -31,9 +33,11 @@ const Teacher = () => {
 
                 const { email, role } = JSON.parse(jsonPayload);
                 localStorage.setItem('email', email);
-
+                
                 if (role === 2) {
                     navigate('/teacher-dashboard');
+                } else {
+                    setError('Unauthorized access');
                 }
             } else {
                 const errorMessage = await response.text();
@@ -52,7 +56,7 @@ const Teacher = () => {
     return (
         <div className="teacher-container">
             <div className="login-form">
-                <IoMdArrowBack className="back-arrow" color="black" size={30} onClick={handleBackClick}/>
+                <IoMdArrowBack className="back-arrow" color="black" size={30} onClick={handleBackClick} />
                 <h2>Öğretmen Girişi</h2>
                 <form onSubmit={handleSubmit}>
                     <div>

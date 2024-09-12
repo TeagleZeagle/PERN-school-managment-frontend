@@ -6,7 +6,6 @@ import './sidebar.css';
 const Sidebar = ({ role }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const navigate = useNavigate();
-
     const handleSignOut = () => {
         localStorage.removeItem('token');
         if (role === 1) {

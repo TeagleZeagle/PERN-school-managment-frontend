@@ -16,7 +16,6 @@ const TeacherSchedule = () => {
                     }
                 });
                 const data = await response.json();
-                console.log(data);
                 setSchedule(data);
             } catch (error) {
                 console.error('Error fetching schedule:', error);

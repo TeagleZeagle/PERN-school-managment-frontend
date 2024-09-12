@@ -13,7 +13,6 @@ const StudentSchedule = () => {
                     }
                 });
                 const data = await response.json();
-                console.log('Fetched data:', data);
                 setSchedule(data);
             } catch (error) {
                 console.error('Error fetching schedule:', error);
@@ -35,7 +34,6 @@ const StudentSchedule = () => {
                     {days.map((day) => {
                         const slot = schedule.find(sch => {
                             const slotStartTime = sch.start_time.substring(0, 5);
-                            console.log(`Checking: ${sch.day} === ${day} && ${slotStartTime} === ${startTime}`);
                             return sch.day === day && slotStartTime === startTime;
                         });
                         return (
